@@ -2,13 +2,12 @@ name: CI Status
 
 on:
   schedule:
-  - cron: "*/10 * * * *"
+  - cron: "*/8 * * * *"
 
 jobs:
   bluez:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - uses: BluezTestBot/action-ci-status@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
