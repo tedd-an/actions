@@ -1,0 +1,14 @@
+name: CI Status
+
+on:
+  schedule:
+  - cron: "*/10 * * * *"
+
+jobs:
+  bluez:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: BluezTestBot/action-ci-status@master
+      with:
+        email_token: ${{ secrets.EMAIL_TOKEN }}
