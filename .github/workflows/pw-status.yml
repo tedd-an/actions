@@ -1,0 +1,14 @@
+name: Patchwork Status
+
+on:
+  schedule:
+  - cron: "*/10 * * * *"
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: BluezTestBot/action-patchwork-status@master
+      with:
+        github_token: ${{ secrets.ACTION_TOKEN }}
+        email_token: ${{ secrets.EMAIL_TOKEN }}
