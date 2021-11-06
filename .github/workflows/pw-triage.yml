@@ -1,4 +1,4 @@
-name: Patchwork Status
+name: Patchwork Triage
 
 on:
   schedule:
@@ -13,5 +13,5 @@ jobs:
         task: 'triage'
         github_token: ${{ secrets.ACTION_TOKEN }}
         email_token: ${{ secrets.EMAIL_TOKEN }}
-        patchwork_token: $ {{ secrets.PATCHWORK_TOKEN }}
+        patchwork_token: ${{ secrets.PATCHWORK_TOKEN }}
 
