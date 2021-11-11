@@ -2,8 +2,7 @@ name: Patchwork Triage
 
 on:
   schedule:
-  - cron: "0 15 * * * *"
-
+  - cron: "0 15 * * *"
 jobs:
   status:
     runs-on: ubuntu-latest
